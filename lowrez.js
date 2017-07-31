@@ -29,9 +29,8 @@ var colors = [
 	"#035E94"
 	]
 
-palette.innerHTML = colors.map(function(color) {
-
-	return '<div class="palette" style="background:' + color + '"></div>'
+palette.innerHTML = colors.map(function(color, index) {
+	return '<div class="' + (index%5==0 ? 'palette--clear ' : '') + 'palette" style="background:' + color + '" alt="#'+ color +'"></div>'
 
 }).join('\n')
 
